@@ -1,57 +1,62 @@
 <!DOCTYPE html>
+
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            class="search-input1"
+            required
+          />
+          <input type="submit" value="Search" class="search-input2" />
+        </form>
+      </header>
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&family=Patrick+Hand&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet" />
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lufuno Elelwani Vele Weather app</title>
-  <link rel="stylesheet" href="src/styles.css" />
-</head>
-
-<body>
-  <div class="weather-app">
-    <header>
-      <form class="weather-search" id="weather-search">
-        <input type="text" placeholder="Enter a city.." required class="weather-search-input" id="search-input" />
-        <input type="submit" value="Search" class="weather-search-bar" id="search-bar" />
-      </form>
-    </header>
-    <main>
-      <div class="weather-section">
-        <div>
-          <h1></h1>
-          <p>
-            <span id="time"></span>,
-            <span id="description"></span>
-            <br />
-            Humidity:<strong id="humidity"></strong>, Wind:<strong id="wind-speed"></strong>
-          </p>
+      <main>
+        <div class="weather-data">
+          <div>
+            <h1 class="weather-city">Paris</h1>
+            <p class="weather-content">
+              <span class="date">Sunday 16:22</span>,
+              <span class="condition">scattered clouds </span> <br />
+              Humidity: <strong class="humid">66%</strong>, Wind:
+              <strong class="speed">3.13km/h</strong>
+            </p>
+          </div>
+          <div class="weather-temp">
+            <div class="icon"></div>
+            <span class="temp-detail">12 </span>
+            <span class="temp-unit">°C</span>
+          </div>
         </div>
-        <div class="current-weather">
-          <span id="icon"></span>
-          <span class="weather-value" id="weather-value"></span>
-          <span class="weather-unit">°C</span>
-        </div>
-      </div>
-
-      <div class="weather-forecast" id="weather-forecast"></div>
-    </main>
-    <footer>
-      This project was coded by
-      <a href="https://github.com/Elelwani17" target="_blank">Lufuno Elelwani Vele,</a>
-      is
-      <a href="https://github.com/Elelwani17/Plus-Final-Project.git" target="_blank">open-sourced on GitHub</a>
-      and
-      <a href="" target="_blank">hosted on Netlify</a>
-    </footer>
-  </div>
-  <script src="src/index.js"></script>
-</body>
-
-</html
+        <div class="weather-forecast" id="forecast"></div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/Elelwani17" target="_blank"
+          >Lufuno Elelwani Vele</a
+        >, is
+        <a href="https://github.com/Elelwani17/Plus-Final-Project" target="_blank">
+          open-sourced on Github</a
+        >
+        and website hosted on
+        <a href="" target="_blank">
+          Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
